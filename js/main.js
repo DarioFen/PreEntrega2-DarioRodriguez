@@ -96,7 +96,8 @@ alert("Bienvenidos a nuestra agencia de viajes! tenemos miles de paquetes al mej
 function esValido (numero) {
     return numero > 0;
 }
-//guardamos los datos del usuario en las varibles
+
+//valido que los datos sean correctos y guardamos los datos del usuario en las varibles
 const cantAdultos = validador("adultos",esValido);
 const cantMenores = validador("menores",esValido);
 const cantHabitaciones = pedirHabitaciones("habitaciones" , esValido);
@@ -112,7 +113,7 @@ const resultado = destinos.map(destino => {
     return destino;
 })
 
-//filtramos los viajes posibles segun capital del cliente
+//filtramos los viajes posibles segun el capital del cliente
 const viajesPosibles = resultado.filter(dest => dest.total < montoMaximo);
 
 //armado de detalle
